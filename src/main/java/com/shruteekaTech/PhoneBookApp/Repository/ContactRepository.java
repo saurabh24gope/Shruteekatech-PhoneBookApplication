@@ -1,5 +1,8 @@
 package com.shruteekaTech.PhoneBookApp.Repository;
 
-public class ContactRepository {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ContactRepository {
 
 }
