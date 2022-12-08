@@ -24,7 +24,7 @@ public class ContactController {
 			return new ResponseEntity<String>(msg,HttpStatus.CREATED);
 		}
 		else {
-			return new ResponseEntity<String>("contact could not be saved here",HttpStatus.CREATED);
+			return new ResponseEntity<String>("contact could not be saved",HttpStatus.CREATED);
 		}
 		
 		
