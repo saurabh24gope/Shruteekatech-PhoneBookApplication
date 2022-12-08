@@ -42,7 +42,7 @@ public class ContactController {
 	public ResponseEntity<Contact> getContactById(@PathVariable Integer id){
 		Contact contact = contactService.getContactById(id);
 		return new ResponseEntity<Contact>(contact,HttpStatus.OK);
-		
-	}
+		}
+	
 
 }
