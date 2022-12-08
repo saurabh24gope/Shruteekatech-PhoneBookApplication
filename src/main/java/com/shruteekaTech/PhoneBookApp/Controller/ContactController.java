@@ -17,7 +17,7 @@ public class ContactController {
 	@PostMapping(value="/saveContact",consumes= "application/json")
 	public ResponseEntity<String>saveContact(@RequestBody Contact contact){
 	
-		boolean saveContact = contactService.saveContact(contact);
+		  boolean saveContact = contactService.saveContact(contact);
 		if(saveContact)
 		{
 			String msg="contact saved successfully";
