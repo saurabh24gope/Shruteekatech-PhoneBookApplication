@@ -63,6 +63,19 @@ public  class ContactServiceImpl implements ContactService{
 		return false;
 	}}
 
+	@Override
+	public boolean deleteContactSoft(Integer id) {
+		Contact contact = contactRepository.findById(id).orElseThrow(()->new ResourceNotFoundException());
+		if(contact!=null) {
+			contact.setActiveSwitch('N');
+			contactRepository.save(contact);
+			return true;
+		}
+		else
+		return false;
+	}
+
+	
 
 		
 		

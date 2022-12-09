@@ -15,5 +15,7 @@ public interface ContactService {
 	public abstract boolean updateContact(Contact contact);
 	
 	public abstract boolean deleteContact(Integer id);
+	
+	public abstract boolean deleteContactSoft(Integer id);
 
 }

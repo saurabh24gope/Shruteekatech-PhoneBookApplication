@@ -63,6 +63,15 @@ public class ContactController {
 		}
 		else {
 		return new ResponseEntity<String>("contact could not be deleted",HttpStatus.CREATED);
+		}}
+	@DeleteMapping(value="/deleteContactSoft/{id}")
+	public ResponseEntity<String> deleteContactSoft(@PathVariable Integer id){
+		boolean deleteContactSoft = contactService.deleteContactSoft(id);
+		if(deleteContactSoft) {
+			return new ResponseEntity<String>("contact deleted successfully",HttpStatus.CREATED);
 		}
+		else
+		return new ResponseEntity<String>("contact not deleted successfully",HttpStatus.CREATED);
+		
 	}
 }
