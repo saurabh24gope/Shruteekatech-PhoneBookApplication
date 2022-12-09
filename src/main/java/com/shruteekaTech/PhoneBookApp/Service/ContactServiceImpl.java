@@ -52,6 +52,25 @@ public  class ContactServiceImpl implements ContactService{
 		
 	}
 
+	@Override
+	public boolean deleteContact(Integer id) {
+		Contact contact = contactRepository.findById(id).orElseThrow(()->new ResourceNotFoundException());
+		if(contact!=null) {
+			contactRepository.deleteById(id);
+			return true;
+			}
+		else {
+		return false;
+	}}
+
+
+		
+		
+		
+	}
+
+
+		
+
 
 	
-}
